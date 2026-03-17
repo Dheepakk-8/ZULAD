@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 1rem 2rem; background: #f4f6fb; }
+header h1 { margin: 0 0 1rem; font-size: 1.5rem; }
+.filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .5rem; margin-bottom: 1rem; }
+button { cursor: pointer; border: 1px solid #d0d7e2; border-radius: 6px; background: white; padding: .5rem; }
+input, select { padding: .45rem; border: 1px solid #d0d7e2; border-radius: 6px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .75rem; margin-bottom: 1rem; }
+.kpi { background: white; border-radius: 8px; padding: .75rem; border: 1px solid #e4e8ef; }
+.kpi span { display: block; color: #586376; font-size: .8rem; }
+.kpi strong { font-size: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { border-bottom: 1px solid #e9edf5; padding: .6rem; text-align: left; }

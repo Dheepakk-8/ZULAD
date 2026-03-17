@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenoti University Learning Analytics Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header>
+      <h1>Zenoti University Learning Analytics Dashboard</h1>
+    </header>
+
+    <section class="filters">
+      <input type="date" id="date_from" />
+      <input type="date" id="date_to" />
+      <select id="course_id"><option value="">All Courses</option></select>
+      <select id="group_id"><option value="">All Groups</option></select>
+      <select id="learner_id"><option value="">All Learners</option></select>
+      <select id="completion_band">
+        <option value="">Completion % (All)</option>
+        <option value="0-25">0-25%</option>
+        <option value="25-50">25-50%</option>
+        <option value="50-75">50-75%</option>
+        <option value="75-100">75-100%</option>
+      </select>
+      <button id="search">Search</button>
+      <button id="reset">Reset</button>
+      <button id="export_csv">Export CSV</button>
+      <button id="export_xlsx">Export Excel</button>
+    </section>
+
+    <section id="kpis" class="kpis"></section>
+
+    <section>
+      <h2>Course Analytics</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Enrollments</th>
+            <th>Completed</th>
+            <th>Completion %</th>
+            <th>Drop Rate %</th>
+          </tr>
+        </thead>
+        <tbody id="course_rows"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>AI Insight Panel (Rule-Based)</h2>
+      <ul id="insights"></ul>
+    </section>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
